@@ -38,7 +38,7 @@ string decryptAffine(const string& ciphertext, int alpha, int beta) {
     string plaintext = "";
     int a_inv = -1;
 
-    // Find modular inverse of alpha
+    
     for (int i = 1; i < M; ++i) {
         if ((alpha * i) % M == 1) {
             a_inv = i;
