@@ -125,7 +125,7 @@ public:
         int rows = (cipher.size() + cols - 1) / cols;
         vector<vector<char>> block(rows, vector<char>(cols, '\0'));
 
-        // Count how many times each number appears
+        
         vector<int> counts(*max_element(num_in.begin(), num_in.end()) + 1, 0);
         for (int val : num_in) counts[val]++;
 
