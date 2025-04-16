@@ -19,7 +19,7 @@ string encrypt(const string& text, const string& key) {
         
         for (size_t i = 0; i < ascii_values.size(); ++i) {
             extended_key += long_key[i];
-            if (ascii_values[i] == 47) { // '/'' character
+            if (ascii_values[i] == 47) {
                 extended_key += long_key[i];
             }
         }
@@ -27,7 +27,7 @@ string encrypt(const string& text, const string& key) {
 
     for (size_t i = 0; i < ascii_values.size(); ++i) {
         int symbol = ascii_values[i];
-        if (symbol >= 65 && symbol <= 90) {  // uppercase letters A-Z
+        if (symbol >= 65 && symbol <= 90) { 
             if (symbol != 47) {
                 int temp = symbol + static_cast<int>(extended_key[i]);
                 if (temp > 90) {
@@ -61,7 +61,7 @@ string decrypt(const string& text, const string& key) {
 
         for (size_t i = 0; i < ascii_values.size(); ++i) {
             extended_key += long_key[i];
-            if (ascii_values[i] == 47) { // '/'' character
+            if (ascii_values[i] == 47) { 
                 extended_key += long_key[i];
             }
         }
